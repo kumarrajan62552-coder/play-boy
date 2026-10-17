@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1371072991526541');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1371072991526541&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+<head><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1371072991526541');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1371072991526541&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>playboymeeting - Telegram Join</title>
@@ -46,12 +45,14 @@
             font-family: 'Orbitron', monospace;
         }
 
+        /* Deep space backdrop grid overlay */
         .bg-grid-pattern {
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
             background-size: 32px 32px;
         }
 
+        /* Ambient Glow Blobs */
         .ambient-blob-1 {
             position: absolute;
             top: 20%;
@@ -82,6 +83,7 @@
             100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
         }
 
+        /* Glowing Card Container */
         .glass-card {
             background: rgba(10, 15, 29, 0.82);
             backdrop-filter: blur(16px);
@@ -98,6 +100,7 @@
             100% { border-color: rgba(0, 242, 254, 0.6); box-shadow: 0 0 50px rgba(0, 242, 254, 0.25), inset 0 0 25px rgba(0, 242, 254, 0.1); }
         }
 
+        /* Profile avatar cyan glow ring */
         .avatar-ring {
             background: radial-gradient(circle, rgba(0,242,254,0.15) 0%, rgba(5,8,22,0.8) 100%);
             border: 2px solid #00f2fe;
@@ -110,13 +113,313 @@
             100% { box-shadow: 0 0 32px rgba(0,242,254,0.95), inset 0 0 18px rgba(0,242,254,0.7); }
         }
 
+        /* Vibrant White Title Glow */
         .title-glow {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
                          0 0 25px rgba(255, 255, 255, 0.6),
                          0 0 40px rgba(0, 242, 254, 0.4);
         }
 
+        /* Real service pill badge */
         .service-badge {
             background: rgba(255, 8, 68, 0.08);
             border: 1.5px solid #ff0844;
-            box-shadow: 0 0 18px rgba(255, 8, 68, 0.45), inset 0 0 10px rgba(255, 8, 6
+            box-shadow: 0 0 18px rgba(255, 8, 68, 0.45), inset 0 0 10px rgba(255, 8, 68, 0.2);
+            animation: badge-glow 2.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes badge-glow {
+            0% { box-shadow: 0 0 12px rgba(255, 8, 68, 0.35); }
+            100% { box-shadow: 0 0 24px rgba(255, 8, 68, 0.75); }
+        }
+
+        /* Join button neon gradient and shadow pulse */
+        .btn-neon {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #ff0844 100%);
+            background-size: 200% 200%;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.65), 0 0 45px rgba(168, 85, 247, 0.35);
+            animation: gradient-shift 4s ease infinite, btn-pulse 2s infinite;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes btn-pulse {
+            0% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 35px rgba(168, 85, 247, 0.3); }
+            50% { box-shadow: 0 0 32px rgba(236, 72, 153, 0.85), 0 0 55px rgba(168, 85, 247, 0.55); }
+            100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 35px rgba(168, 85, 247, 0.3); }
+        }
+
+        .btn-neon:hover {
+            transform: translateY(-2px) scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .btn-neon:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        /* Countdown circle container */
+        .timer-circle {
+            background: rgba(6, 12, 26, 0.85);
+            border: 2px solid rgba(0, 242, 254, 0.5);
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.25), inset 0 0 20px rgba(0, 242, 254, 0.15);
+        }
+
+        .timer-text-glow {
+            color: #00f2fe;
+            text-shadow: 0 0 12px #00f2fe, 0 0 28px #00f2fe;
+        }
+
+        /* Progress ring stroke animation */
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.3s ease;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 0;
+        }
+
+        /* Bottom status capsule */
+        .status-capsule {
+            background: rgba(8, 12, 24, 0.95);
+            border: 1.5px solid #ff0844;
+            box-shadow: 0 0 20px rgba(255, 8, 68, 0.4), inset 0 0 10px rgba(255, 8, 68, 0.15);
+        }
+
+        /* Ripple effect for button click */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-anim 0.6s linear;
+            background: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+        }
+
+        @keyframes ripple-anim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 relative bg-grid-pattern text-white overflow-hidden">
+
+    <!-- Starfield Particles Canvas -->
+    <canvas id="starfieldCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- Background Ambient Glow Effects -->
+    <div class="ambient-blob-1"></div>
+    <div class="ambient-blob-2"></div>
+
+    <!-- Main Glassmorphism UI Card -->
+    <main class="relative z-10 w-full max-w-[420px] glass-card rounded-[32px] px-6 py-8 md:px-8 md:py-10 flex flex-col items-center text-center my-auto transition-all duration-300">
+
+        <!-- Top Profile Avatar Ring -->
+        <div class="relative mb-5 group cursor-pointer">
+            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full avatar-ring flex items-center justify-center relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                <!-- Inner Gradient Fill -->
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/10 to-transparent"></div>
+                <!-- Telegram Icon -->
+                <i class="fa-brands fa-telegram text-5xl md:text-6xl text-cyan-400 drop-shadow-[0_0_12px_#00f2fe] relative z-10 transform group-hover:rotate-6 transition-transform duration-300"></i>
+            </div>
+            <!-- Online Green Status Indicator with Pulsing Aura -->
+            <div class="absolute bottom-1 right-1 flex items-center justify-center">
+                <span class="animate-ping absolute inline-flex h-4 w-4 rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-400 border-2 border-slate-900 shadow-[0_0_10px_#10b981]"></span>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3 text-glow text-white">
+            playboymeeting
+        </h1>
+
+        <!-- Service Pill Badge -->
+        <div class="service-badge px-6 py-1.5 rounded-full mb-8 inline-flex items-center space-x-2 cursor-default">
+            <span class="text-sm font-semibold text-pink-200 tracking-wide">Real service</span>
+            <span class="text-base animate-bounce">🔥</span>
+        </div>
+
+        <!-- Telegram Action Button -->
+        <a id="telegramLink" href="https://t.me/+uECO1q_eLqJiMmRl" target="_blank" rel="noopener noreferrer" class="relative overflow-hidden w-full btn-neon text-white font-bold py-4 px-6 rounded-full flex items-center justify-center space-x-3 text-lg mb-8 cursor-pointer select-none">
+            <i class="fa-brands fa-telegram text-2xl drop-shadow"></i>
+            <span class="tracking-wider uppercase font-extrabold text-white drop-shadow-md">JOIN TELEGRAM</span>
+        </a>
+
+        <!-- Circular Digital Countdown Display with SVG Ring -->
+        <div class="relative w-36 h-36 md:w-40 md:h-40 rounded-full timer-circle flex items-center justify-center mb-8">
+            <!-- Progress Ring SVG -->
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                <!-- Track circle -->
+                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0, 242, 254, 0.1)" stroke-width="3" />
+                <!-- Dynamic Progress circle -->
+                <circle id="progressRing" class="progress-ring-circle" cx="50" cy="50" r="45" fill="none" stroke="#00f2fe" stroke-width="3" stroke-linecap="round" />
+            </svg>
+
+            <!-- Digital Countdown Counter Text -->
+            <span id="countdownDisplay" class="digital-font text-3xl md:text-4xl font-extrabold timer-text-glow tracking-widest z-10">
+                .60
+            </span>
+        </div>
+
+        <!-- Bottom Capsule Box -->
+        <div class="w-full status-capsule py-3 px-5 rounded-full flex items-center justify-center text-sm font-semibold tracking-wide">
+            <span class="text-gray-200">
+                Auto joining in <span id="secondsText" class="font-extrabold text-pink-400 digital-font text-base mx-0.5">60</span> seconds...
+            </span>
+        </div>
+
+    </main>
+
+    <!-- Interactive Script Logic -->
+    <script>
+        // Target Link & Options
+        const TELEGRAM_URL = "https://t.me/+uECO1q_eLqJiMmRl";
+        const TOTAL_SECONDS = 60;
+        let countdownSeconds = TOTAL_SECONDS;
+
+        const countdownDisplay = document.getElementById('countdownDisplay');
+        const secondsText = document.getElementById('secondsText');
+        const progressRing = document.getElementById('progressRing');
+        const telegramBtn = document.getElementById('telegramLink');
+
+        // Circle circumference for SVG ring calculation (2 * PI * r) where r = 45 -> ~282.74
+        const CIRCUMFERENCE = 2 * Math.PI * 45;
+
+        function setProgress(percent) {
+            const offset = CIRCUMFERENCE - (percent / 100 * CIRCUMFERENCE);
+            progressRing.style.strokeDashoffset = offset;
+        }
+
+        // Initialize ring stroke state
+        setProgress(100);
+
+        // Countdown Timer Logic
+        const timerInterval = setInterval(() => {
+            countdownSeconds--;
+
+            if (countdownSeconds >= 0) {
+                // Update display (.60, .59, .58...)
+                const formattedNum = countdownSeconds < 10 ? `0${countdownSeconds}` : countdownSeconds;
+                countdownDisplay.textContent = `.${formattedNum}`;
+                secondsText.textContent = countdownSeconds;
+
+                // Update ring progress percentage
+                const progressPercent = (countdownSeconds / TOTAL_SECONDS) * 100;
+                setProgress(progressPercent);
+            }
+
+            if (countdownSeconds <= 0) {
+                clearInterval(timerInterval);
+                countdownDisplay.textContent = ".00";
+                secondsText.textContent = "0";
+                setProgress(0);
+
+                // Automatic redirect after countdown reaches zero
+                setTimeout(() => {
+                    window.location.href = TELEGRAM_URL;
+                }, 400);
+            }
+        }, 1000);
+
+        // Ripple Effect on Button Click
+        telegramBtn.addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.style.width = ripple.style.height = `${Math.max(rect.width, rect.height)}px`;
+
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+
+        // Interactive Deep Space Starfield Canvas Particle System
+        const canvas = document.getElementById('starfieldCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initStars();
+        });
+
+        let stars = [];
+        const STAR_COUNT = Math.min(Math.floor(window.innerWidth * 0.15), 120);
+
+        class Star {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2 + 0.5;
+                this.color = Math.random() > 0.45 ? '#00f2fe' : (Math.random() > 0.5 ? '#ff0844' : '#a855f7');
+                this.alpha = Math.random();
+                this.alphaSpeed = (Math.random() * 0.02 + 0.005) * (Math.random() > 0.5 ? 1 : -1);
+                this.velocityY = -(Math.random() * 0.2 + 0.05);
+            }
+
+            update() {
+                this.y += this.velocityY;
+                if (this.y < 0) this.y = height;
+
+                this.alpha += this.alphaSpeed;
+                if (this.alpha >= 1 || this.alpha <= 0.1) {
+                    this.alphaSpeed = -this.alphaSpeed;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = Math.max(0, Math.min(1, this.alpha));
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = this.size * 4;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function initStars() {
+            stars = [];
+            for (let i = 0; i < STAR_COUNT; i++) {
+                stars.push(new Star());
+            }
+        }
+
+        function render() {
+            ctx.clearRect(0, 0, width, height);
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+            requestAnimationFrame(render);
+        }
+
+        initStars();
+        render();
+    </script>
+</body>
+</html>
